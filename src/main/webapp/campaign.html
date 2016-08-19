@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campaign Ad</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="addcontroller.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div ng-controller="campaignCtrl">
+
+        <h2> Add Campaign </h2>
+
+        <div ng-init="addDuration=0">
+        PartnerId : <input type="text" id="addPartnerId" ng-model="addPartnerId" required><br><br>
+        Duration  : <input type="number" id="addDuration" ng-model="addDuration" min="0" required><br><br>
+        Campaign  : <input type="text" id="addCampaign" ng-model="addCampaign" required><br><br>
+        <button type="button" ng-click="saveCampaign()" ng-disabled="!addPartnerId || !addCampaign">ADD CAMPAIGN</button>
+        </div>
+        <br><br>
+        {{saveObjMessage}}
+        {{saveErrorObj.errorMessage}}
+
+        <br><br>
+        <br><br>
+
+        <h1> ******************************************* </h1>
+
+        <h2> Fetch Campaign for input PartnerId </h2>
+        PartnerId : <input type="text" id="partnerId" ng-model="partnerId">
+        <br>
+        <br>
+        <button type="button" ng-click="fetchCampaign()">FETCH CAMPAIGN</button>
+
+        <ul>
+            <h3> List of Active Campaign Ads</h3>
+            <li ng-repeat="campaign in campaigns">
+                Partner Id : {{ campaign.partnerId }}  | AdContent : {{campaign.adContent}}
+            </li>
+
+
+        </ul>
+        {{errorObj.errorMessage}}
+
+    </div>
+</body>
+</html>

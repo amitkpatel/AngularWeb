@@ -1,0 +1,18 @@
+{
+	"campaigns" :[
+		  {
+			"adContent": "Touches the lives",
+			"creationDate": "2016-08-18T23:20:35.068-04:00",
+			"duration": 60000,
+			"expireDate": "2016-08-19T16:00:35.068-04:00",
+			"partnerId": "HCL"
+		  },
+		  {
+			"adContent": "Steer the process together",
+			"creationDate": "2016-08-18T23:20:35.068-04:00",
+			"duration": 7000000,
+			"expireDate": "2016-11-07T22:47:15.068-05:00",
+			"partnerId": "SPAN"
+		  }
+	]
+}
